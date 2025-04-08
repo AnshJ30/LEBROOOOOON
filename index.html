@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Basketball Central</title>
+</head>
+<style>
+       body {
+      font-family: 'Archivo';
+      font-weight: 900;
+      background-color: #f4f4f4;
+      color: #130101;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #7a27d2d3;
+      color: white;
+      border-radius: 10px;
+    }
+
+    form {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 20px auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    table {
+      margin: 30px auto;
+      width: 80%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ff6b00;
+      color: white;
+    }
+
+    .favorite {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .fav-player {
+      font-weight: bold;
+      color: #ff6b00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏀 Basketball Central</h1>
+    <p>The best place for basketball fans</p>
+  </header>
+
+  <!-- Form -->
+  <form id="playerForm">
+    <h2>Enter Your Favorite Player</h2>
+    <label for="player">Player Name:</label>
+    <input type="text" id="player" required>
+
+    <label for="position">Position:</label>
+    <select id="position">
+      <option>Point Guard</option>
+      <option>Shooting Guard</option>
+      <option>Small Forward</option>
+      <option>Power Forward</option>
+      <option>Center</option>
+    </select>
+
+    <label for="notes">Share a fun fact about them down here! </label>
+    <textarea id="notes" rows="3"></textarea>
+
+    <button type="submit">Save Favorite</button>
+  </form>
+
+  <!-- Favorite player section -->
+  <div class="favorite">
+    <p>Your Favorite Player: <span id="favDisplay" class="fav-player">None</span></p>
+    <button onclick="clearFavorite()">Clear Favorite</button>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>PPG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Stephen Curry</td>
+        <td>Warriors</td>
+        <td>24.4</td>
+      </tr>
+      <tr>
+        <td>Jayson Tatum</td>
+        <td>Celtics</td>
+        <td>26.9</td>
+      </tr>
+      <tr>
+        <td>Giannis Antetokounmpo</td>
+        <td>Bucks</td>
+        <td>30.5</td>
+      </tr>
+        <td> Lebron Raymone James</td>
+        <td>Lakers</td>
+        <td>24.6</td>
+      </tr>
+        <td>Anthony Edwards</td>
+        <td>Timberwolves</td>
+        <td>27.4</td>
+        <tr>
+          <td>Luka Dončić</td>
+          <td>Lakers</td>
+          <td>33.1</td>
+        </tr>
+        <tr>
+          <td>Joel Embiid</td>
+          <td>76ers</td>
+          <td>34.5</td>
+        </tr>
+        <tr>
+          <td>Nikola Jokic</td>
+          <td>Nuggets</td>
+          <td>30.0</td>
+        </tr>
+        <tr>
+          <td>Kevin Durant</td>
+          <td>Suns</td>
+          <td>27.9</td>
+        </tr>
+        <tr>
+          <td>Devin Booker</td>
+          <td>Suns</td>
+          <td>26.6</td>
+        </tr>
+        <tr>
+          <td>Shai Gilgeous-Alexander</td>
+          <td>Thunder</td>
+          <td>31.2</td>
+        </tr>
+        <tr>
+          <td>Tyrese Haliburton</td>
+          <td>Pacers</td>
+          <td>20.1</td>
+        </tr>
+        <tr>
+          <td>Damian Lillard</td>
+          <td>Bucks</td>
+          <td>24.6</td>
+        </tr>
+        <tr>
+          <td>Donovan Mitchell</td>
+          <td>Cavaliers</td>
+          <td>27.4</td>
+        </tr>
+        <tr>
+          <td>Jalen Brunson</td>
+          <td>Knicks</td>
+          <td>28.7</td>
+        </tr>
+        <tr>
+          <td>Jaylen Brown</td>
+          <td>Celtics</td>
+          <td>23.2</td>
+        </tr>
+        <tr>
+          <td>De'Aaron Fox</td>
+          <td>Spurs</td>
+          <td>26.6</td>
+        </tr>
+        <tr>
+          <td>James Harden</td>
+          <td>Clippers</td>
+          <td>22.1</td>
+        </tr>
+        <tr>
+          <td>Jamal Murray</td>
+          <td>Nuggets</td>
+          <td>21.2</td>
+        </tr>
+        <tr>
+          <td>Zion Williamson</td>
+          <td>Pelicans</td>
+          <td>22.9</td>
+        </tr>
+        <tr>
+          <td>Kyrie Irving</td>
+          <td>Mavericks</td>
+          <td>25.6</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('playerForm');
+    const favDisplay = document.getElementById('favDisplay');
+
+    // Load saved favorite from localStorage
+    window.onload = () => {
+      const saved = localStorage.getItem('favoritePlayer');
+      if (saved) {
+        favDisplay.textContent = saved;
+      }
+    };
+
+    // Handle form submission
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const player = document.getElementById('player').value;
+      const position = document.getElementById('position').value;
+      const notes = document.getElementById('notes').value;
+
+      const summary = `${player} (${position}) - ${notes}`;
+      favDisplay.textContent = player;
+      localStorage.setItem('favoritePlayer', player);
+
+      alert("Favorite player saved!");
+      form.reset();
+    });
+
+    function clearFavorite() {
+      localStorage.removeItem('favoritePlayer');
+      favDisplay.textContent = 'None';
+    }
+  </script>
+
+</body>
+</html>
